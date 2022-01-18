@@ -11,7 +11,7 @@ int main()
 	while (1){
 		switch_datain = ~IORD_ALTERA_AVALON_PIO_DATA(BUTTON_BASE);
 		switch_datain &= (0b0000001111);
-		IOWR_ALTERA_AVALON_PIO_ADATA(LED_BASE,switch_datain);
+		IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE,switch_datain);
 	}
 	return 0;
 }
